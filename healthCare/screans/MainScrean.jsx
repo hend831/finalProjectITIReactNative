@@ -33,11 +33,7 @@ export default function MainScreen() {
           imageSource={require('../../healthCare/assets/phr.png')}
           cardText="Pharmacy"
         />
-        <ServiceCard
         
-          imageSource={require('../../healthCare/assets/amb.png')}
-          cardText="Ambulance"
-        />
       </View>
     </SafeAreaView>
   );

@@ -4,16 +4,12 @@ import { View, StyleSheet,Text } from 'react-native';
 import ImageSign from '../components/ImageSign'; // Import the ImageSign component
 import SignButton from '../components/SignButton'; // Import the SignButton component
 import MyTextInput from '../components/TextInput';
-const RegisterScrean = () => {
+
+const RegisterAsDoctor = () => {
   return (
     <View style={styles.container}>
       {/* You can customize the ImageSign component with your desired props */}
-      <Text style={styles.laball}><Text style={styles.textt}>S</Text>ign <Text style={styles.textt}>U</Text>p <Text style={styles.textt}>A</Text>s <Text style={styles.textt}>P</Text>atient</Text>
-      <ImageSign
-        src={require('../assets/d.png')} // Provide the image source
-        style={{ marginBottom: 20 }} // Add any additional styles
-      />
-
+     <Text style={styles.laball}><Text style={styles.textt}>S</Text>ign <Text style={styles.textt}>U</Text>p <Text style={styles.textt}>A</Text>s <Text style={styles.textt}>D</Text>octor</Text>
       {/* TextInput for username and password input */}
       <MyTextInput
         style={styles.input}
@@ -39,6 +35,44 @@ const RegisterScrean = () => {
         secureTextEntry // To hide the entered text
         icon="lock"
       />
+       <MyTextInput
+        style={styles.input}
+        placeholder="Specialization"
+        secureTextEntry // To hide the entered text
+        icon="user-md"
+      />
+       <MyTextInput
+        style={styles.input}
+        placeholder="address "
+        secureTextEntry // To hide the entered text
+        icon="map-marker"
+      />
+      <MyTextInput
+        style={styles.input}
+        placeholder="Appointments available on the day "
+        secureTextEntry // To hide the entered text
+        icon="hourglass"
+      />
+       <MyTextInput
+        style={styles.input}
+        placeholder="Detection price "
+        secureTextEntry // To hide the entered text
+        icon="credit-card"
+      />
+      <MyTextInput
+        style={styles.input}
+        placeholder="Upload Specialization card Image"
+        secureTextEntry // To hide the entered text
+        icon="image"
+      />
+        <MyTextInput
+        style={styles.input}
+        placeholder="Upload Image "
+        secureTextEntry // To hide the entered text
+        icon="image"
+      />
+      
+      
       
 
       {/* Sign in button */}
@@ -64,6 +98,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
+ 
+  laball:{
+    marginBottom:20,
+    fontWeight:'600',
+
+  },
   input: {
     width: '100%',
     height: 40,
@@ -71,11 +111,6 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     marginBottom: 10,
     padding: 15,
-  },
-  laball:{
-    marginBottom:20,
-    fontWeight:'600',
-
   },
   text:{
     margin:10,
@@ -86,4 +121,4 @@ const styles = StyleSheet.create({
    },
 });
 
-export default RegisterScrean;
+export default RegisterAsDoctor;

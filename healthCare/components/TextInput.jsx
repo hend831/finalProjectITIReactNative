@@ -18,29 +18,7 @@ const MyTextInput = ({ placeholder, icon }) => {
 };
 
 const styles = StyleSheet.create({
-//   inputContainer: {
-//     flexDirection: 'row',
-//     alignItems: 'center',
-//     height: 45,
-//     marginBottom: 10,
-//     borderWidth: 1,
-//     borderRadius: 17,
-//     backgroundColor: 'white',
-//     width: '100%',
-//   },
-//   input: {
-//     flex: 1,
-//     paddingLeft: 10,
-//   },
-//   icon: {
-//     width: 30, // Adjust the icon's width as needed
-//     height: 30, // Adjust the icon's height as needed
-//     marginLeft: 10,
-//     padding:7,
-//     color:'#45B3CB',
-//     fontWeight:'700',
-//   },
-// });
+
 inputContainer: {
   flexDirection: 'row',
   

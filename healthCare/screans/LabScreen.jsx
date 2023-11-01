@@ -1,43 +1,43 @@
 
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import Doctors from '../components/Doctors'; // Import the Doctors component
-import { useNavigation } from '@react-navigation/native';
 
-const DoctorsScreen = () => {
+import { useNavigation } from '@react-navigation/native';
+import Lab from './../components/Lab';
+
+
+const LabScreen = () => {
   const navigation = useNavigation();
 
   // Define the data for the doctors
-  const doctorsData = [
+  const labData = [
     {
       id: 1,
-      name: 'Dr. John Doe',
-      specialty: 'Cardiologist',
-      jobTitle: 'Consultant',
+      name: 'Laboratory name',
       address: '123 Main Street, City',
-      price: 'Consultation fee: $100',
-      waitingPeriod: 'Average waiting period: 30 mins',
+      HomeService: 'price is 5 pounds ',
       mobileNumber: 'Contact: (123) 456-7890',
-      image: require('../assets/user.png'), // Replace with the actual image path
+      image: require('../assets/s5.png'), // Replace with the actual image path
+      message:'SendUs Message',
     },
     // Add more doctor data objects as needed
   ];
 
   // Handle the onPress event when a doctor's profile is clicked
-  const handleDoctorPress = (doctorId) => {
+  const handleDoctorPress = (labId) => {
     // You can navigate to another screen here using your navigation system
     // For example, if you're using React Navigation, you can do:
-    navigation.navigate('DoctorDetails', { doctorId });
+    navigation.navigate('DoctorDetails', { labId });
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        {doctorsData.map((doctor) => (
-          <Doctors
-            key={doctor.id}
-            doctorInfo={doctor}
-            onPress={() => handleDoctorPress(doctor.id)}
+        {labData.map((lab) => (
+          <Lab
+            key={lab.id}
+            labInfo={lab}
+            onPress={() => handleDoctorPress(lab.id)}
           />
         ))}
       </ScrollView>
@@ -51,6 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DoctorsScreen;
-DoctorsScreen.js
-DoctorsScreen.js
+export default LabScreen;
