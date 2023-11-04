@@ -1,76 +1,4 @@
 
-//          
-//         </View>
-//         <View style={styles.row}>
-//           <TouchableOpacity
-//             style={styles.card}
-//             onPress={() => navigation.navigate('Ambulance')}
-//           >
-//             <Image
-//               source={require('../assets/s4.png')}
-//               style={styles.cardImage}
-//             />
-//             <Text style={styles.cardText}>Gynecology</Text>
-//           </TouchableOpacity>
-//           <TouchableOpacity
-//             style={styles.card}
-//             onPress={() => navigation.navigate('SomeOtherScreen')}
-//           >
-//             <Image
-//               source={require('../assets/s5.png')}
-//               style={styles.cardImage}
-//             />
-//             <Text style={styles.cardText}>Gastroenterology</Text>
-//           </TouchableOpacity>
-//           <TouchableOpacity
-//             style={styles.card}
-//             onPress={() => navigation.navigate('YetAnotherScreen')}
-//           >
-//             <Image
-//               source={require('../assets/s6.png')}
-//               style={styles.cardImage}
-//             />
-//             <Text style={styles.cardText}>Neurology</Text>
-//           </TouchableOpacity>
-//         </View>
-//         <View style={styles.row}>
-//           <TouchableOpacity
-//             style={styles.card}
-//             onPress={() => navigation.navigate('Doctors')}
-//           >
-//             <Image
-//               source={require('../assets/s7.png')}
-//               style={styles.cardImage}
-//             />
-//             <Text style={styles.cardText}>Ophthalmology</Text>
-//           </TouchableOpacity>
-//           <TouchableOpacity
-//             style={styles.card}
-//             onPress={() => navigation.navigate('Laboratory')}
-//           >
-//             <Image
-//               source={require('../assets/s8.png')}
-//               style={styles.cardImage}
-//             />
-//             <Text style={styles.cardText}>Dermatology</Text>
-//           </TouchableOpacity>
-//           <TouchableOpacity
-//             style={styles.card}
-//             onPress={() => navigation.navigate('Pharmacy')}
-//           >
-//             <Image
-//               source={require('../assets/s9.png')}
-//               style={styles.cardImage}
-//             />
-//             <Text style={styles.cardText}>Oral and dental</Text>
-//           </TouchableOpacity>
-//         </View>
-//         {/* Add more rows of cards here as needed */}
-//       </View>
-//     </SafeAreaView>
-//   );
-// }
-
 import React from 'react';
 import { SafeAreaView, View, Text, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -91,12 +19,12 @@ export default function SpecialtiesScreen() {
             cardText="Cardiology"
           />
           <ServiceCards
-            screenName="Laboratory"
+            screenName="doctors"
             imageSource={require('../assets/s2.png')}
             cardText="Nephrology"
           />
           <ServiceCards
-            screenName="Pharmacy"
+            screenName="doctors"
             imageSource={require('../assets/s3.png')}
             cardText="Pediatrics"
           />
@@ -108,12 +36,12 @@ export default function SpecialtiesScreen() {
             cardText="Gynecology"
           />
           <ServiceCards
-            screenName="Laboratory"
+            screenName="doctors"
             imageSource={require('../assets/s5.png')}
             cardText="Gastroenterology"
           />
           <ServiceCards
-            screenName="Pharmacy"
+            screenName="doctors"
             imageSource={require('../assets/s6.png')}
             cardText="Neurology"
           />
@@ -126,12 +54,12 @@ export default function SpecialtiesScreen() {
             cardText="Ophthalmology"
           />
           <ServiceCards
-            screenName="Laboratory"
+            screenName="doctors"
             imageSource={require('../assets/s8.png')}
             cardText="Dermatology"
           />
           <ServiceCards
-            screenName="Pharmacy"
+            screenName="doctors"
             imageSource={require('../assets/s9.png')}
             cardText="Oral and dental"
           />
@@ -147,6 +75,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
     padding: 16,
+    backgroundColor:'#eaf6f6',
   },
   grid: {
     alignItems: 'center',

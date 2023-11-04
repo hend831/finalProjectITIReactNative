@@ -1,6 +1,6 @@
 // ProfileScreen.js
 import React from 'react';
-import { View, Text, Image, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 
 const ProfileScreen = () => {
 
@@ -9,26 +9,29 @@ const ProfileScreen = () => {
   };
 
   return (
-    <View>
-    <View style={styles.container}>
+
+    <SafeAreaView style={styles.container}>
+    <View >
        <Image source={require('../../healthCare/assets/doctor.png')} style={styles.profileImage} />
       <Text style={styles.userName}>name:</Text>
       <Text style={styles.userDetails}>address:</Text>
       <Text style={styles.userDetails}>phone:</Text>
       <Text style={styles.userDetails}>email:</Text>
      
-    </View>
+   
     <TouchableOpacity style={styles.btn} onPress={handleLogout} > 
       <Text style={styles.txt}>Logout</Text>
       </TouchableOpacity>
     </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-   alignItems:'center',
+  marginLeft:20,
+   marginTop:40,
   },
   profileImage: {
     width: 150,
@@ -54,11 +57,9 @@ const styles = StyleSheet.create({
   },
   btn:{
    backgroundColor:'gray',
-   width:'20%',
+  margin:10,
+ width:'28%',
    borderRadius:10,
-   marginHorizontal:'5%',
-   
-  
    
   },
   txt:{

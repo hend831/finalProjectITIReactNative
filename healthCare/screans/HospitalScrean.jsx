@@ -9,8 +9,8 @@ export default function HospitalScrean(){
     return(
         <SafeAreaView style={styles.container}>
       <Image source={require('../../healthCare/assets/about.png')} style={styles.image} />
-      <Text style={styles.text}><Text style={styles.textt}>A</Text>about <Text style={styles.textt}>U</Text>s</Text>
-      <Text style={styles.text}>We are an electronic website for your medical services, where you can request medications, medical consultations, and book clinics, 
+      <Text style={styles.title}><Text style={styles.letter}>A</Text>bout <Text style={styles.letter}>U</Text>s</Text>
+      <Text style={styles.title}>We are an electronic website for your medical services, where you can request medications, medical consultations, and book clinics, 
 all of this through one place, 
 which is our website.</Text>
       <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("Main ", MainScrean)} >
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
       flex: 1,
       
       alignItems: 'center',
-      backgroundColor:'#F5F5F5',
+      backgroundColor:'#eaf6f6',
     },
     image: {
       width: 200, // Adjust the width and height as needed
@@ -32,20 +32,20 @@ const styles = StyleSheet.create({
       marginBottom: 30,
       borderRadius: 10, // Adjust the spacing between the image and button
     },
-    text:{
-        color: 'black', // Text color
-        fontSize: 20,
-        marginBottom:30,
-        padding:20,
-        paddingTop:5,
-       
-        textAlign:'left',
-      },
-      textt:{
-        color: '#FF8c00', // Text color
-        fontSize: 20,
-        marginBottom:30,
-      },
+    title: {
+    
+      fontSize: 22,
+      marginBottom: 7,
+      textAlign: 'left',
+      marginTop:7,
+      margin:5,
+      padding:4,
+    },
+    letter: {
+      fontWeight: 'bold',
+      fontSize: 30,
+      color: '#FF8c00',
+    },
     button: {
       backgroundColor: '#45B3CB', // Background color
       borderRadius: 10, // Border radius

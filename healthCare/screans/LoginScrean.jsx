@@ -1,10 +1,13 @@
 
 import React from 'react';
-import { View, StyleSheet, Image, TextInput, Text } from 'react-native';
+import { View, StyleSheet, Image, TextInput, Text, TouchableOpacity } from 'react-native';
 import ImageSign from '../components/ImageSign'; // Import the ImageSign component
 import SignButton from '../components/SignButton'; // Import the SignButton component
 import MyTextInput from '../components/TextInput';
+import RegisterAs from './RegisterAs';
+import { useNavigation } from '@react-navigation/native';
 const LoginScrean = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       {/* You can customize the ImageSign component with your desired props */}
@@ -36,7 +39,11 @@ const LoginScrean = () => {
           alert('Signing in...');
         }}
       />
-      <Text style={styles.text}>don't have an account yet? <Text  style={styles.textt}>Register Now</Text></Text>
+      <Text style={styles.text}>don't have an account yet?
+       <TouchableOpacity onPress={() => navigation.navigate("register_As", RegisterAs)}>
+        <Text  style={styles.textt}>Register Now</Text>
+        </TouchableOpacity>
+         </Text>
       {/* You can add more components or elements as needed */}
     </View>
   );

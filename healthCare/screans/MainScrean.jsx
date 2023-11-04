@@ -1,18 +1,27 @@
 
 
 import React from 'react';
-import { SafeAreaView, View, Text , StyleSheet } from 'react-native';
+import { SafeAreaView, View, Text , StyleSheet ,ImageBackground} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import ServiceCard from '../components/ServiceCard';
 import SpecialtiesScreen from './ٍٍSpecialtiesScrean';
+import LabScreen from './LabScreen';
+
+import PharmacyScreen from './PharmacyScreen'
 
 
 export default function MainScreen() {
   const navigation = useNavigation();
 
   return (
+   
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}><Text style={styles.textt}>O</Text>ur <Text style={styles.textt}>S</Text>ervices</Text>
+      <View style={styles.background}>
+      
+      <Text style={styles.title}>
+          <Text style={styles.letter}>O</Text>ur{' '}
+          <Text style={styles.letter}>S</Text>ervices
+        </Text>
       <View style={styles.row}>
         <ServiceCard
           
@@ -25,6 +34,7 @@ export default function MainScreen() {
         
           imageSource={require('../../healthCare/assets/lab.png')}
           cardText="Laboratory"
+          nav={() => navigation.navigate("lab", LabScreen)}
         />
         </View>
          <View style={styles.row}>
@@ -32,27 +42,29 @@ export default function MainScreen() {
         
           imageSource={require('../../healthCare/assets/phr.png')}
           cardText="Pharmacy"
+          nav={() => navigation.navigate("pharmacys", PharmacyScreen)}
         />
         
       </View>
+     
+      </View>
+    
     </SafeAreaView>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    marginTop: 10,
-    padding: 16,
+    marginTop: 30,
+  
   },
-  textt:{
-    color: '#FF8c00', // Text color
-    fontSize: 20,
-    marginBottom:30,
-  },
-  row: {
+
+   row: {
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 10,
   },
   card: {
     backgroundColor: '#45B3CB',
@@ -81,8 +93,61 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 5,
   },
-  text: {
-    marginBottom: 10,
+
+    background: {
+    flex: 1,
+    backgroundColor: '#eaf6f6', // Set your background color here
+    padding: 16,
+    justifyContent:'center',
+    
+  },
+  
+  title: {
+    
     fontSize: 20,
+    marginBottom: 30,
+    textAlign: 'center',
+  },
+  letter: {
+    fontWeight: 'bold',
+    fontSize: 30,
+    color: '#FF8c00',
+  },
+  image:{
+    width:'70%',
+    height:130,
   },
 });
+
+
+
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <View style={styles.background}>
+//         <Text style={styles.title}>
+//           <Text style={styles.letter}>O</Text>ur{' '}
+//           <Text style={styles.letter}>S</Text>ervices
+//         </Text>
+//         <View style={styles.row}>
+//           <ServiceCard
+//             imageSource={require('../../healthCare/assets/da.png')}
+//             cardText="Doctors"
+//             nav={() => navigation.navigate('specialties',SpecialtiesScreen)}
+//           />
+//           <ServiceCard
+//             imageSource={require('../../healthCare/assets/lab.png')}
+//             cardText="Laboratory"
+//           />
+//         </View>
+//         <View style={styles.row}>
+//           <ServiceCard
+//             imageSource={require('../../healthCare/assets/phr.png')}
+//             cardText="Pharmacy"
+//           />
+//         </View>
+//       </View>
+//     </SafeAreaView>
+//   );
+// }
+
+

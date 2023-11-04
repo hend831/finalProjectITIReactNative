@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Image, TouchableOpacity,Text, StyleSheet ,SafeAreaView} from 'react-native';
+import {  Image, TouchableOpacity,Text, StyleSheet ,SafeAreaView,View} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import HospitalScrean from '../screans/HospitalScrean'
 export default function HomeScreen() {
@@ -7,24 +7,28 @@ export default function HomeScreen() {
   return (
     
     <SafeAreaView style={styles.container}>
-     <Text style={styles.text}>welcome to <Text style={styles.textt}>Y</Text>alla <Text style={styles.textt}>H</Text>elp</Text>
+     
+      <Text style={styles.title}>welcome to <Text style={styles.letter}>Y</Text>alla <Text style={styles.letter}>H</Text>elp</Text>
       <Image source={require('../../healthCare/assets/doctor.png')} style={styles.image} />
      
       <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate("About ", HospitalScrean)}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
+  
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
   
     alignItems: 'center',
     justifyContent:'center',
-    backgroundColor:'#F5F5F5',
+    backgroundColor:'#eaf6f6',
   },
+
   image: {
     width: 200, // Adjust the width and height as needed
     height: 250,
@@ -39,18 +43,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  title: {
+    
+    fontSize: 22,
+    marginBottom: 30,
+    textAlign: 'center',
+  },
+  letter: {
+    fontWeight: 'bold',
+    fontSize: 30,
+    color: '#FF8c00',
+  },
   buttonText: {
     color: 'white', // Text color
     fontSize: 16, // Font size
   },
-  text:{
-    color: 'black', // Text color
-    fontSize: 20,
-    marginBottom:30,
-  },
-  textt:{
-    color: '#FF8c00', // Text color
-    fontSize: 20,
-    marginBottom:30,
-  }
+ 
 });

@@ -48,6 +48,8 @@ const DoctorsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor:'#eaf6f6',
+    marginTop:30,
   },
 });
 
