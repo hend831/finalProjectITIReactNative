@@ -20,6 +20,7 @@ import RegisterAsPharmacy from './../screans/RegisterAsPharmacy';
 import RegisterAsLaboratory from './../screans/RegisterAsLaboratory';
 import PeopleList from "../screans/PeopleList";
 import ChatScreen from "../screans/ChatScreen";
+import FormPage from "../screans/FormPage";
 
 
 
@@ -27,7 +28,8 @@ const Stack = createStackNavigator();
 function Navigation() {
   return (
     <Stack.Navigator >
-      
+    
+    
       <Stack.Screen name="Home" component={HomeScrean}  />
       <Stack.Screen name="login" component={LoginScrean} />
       <Stack.Screen name="register" component={RegisterScrean} />
@@ -35,17 +37,20 @@ function Navigation() {
       <Stack.Screen name="Main " component={MainScrean} />
       <Stack.Screen name="specialties " component={SpecialtiesScrean} />
       <Stack.Screen name="doctors" component={DoctorsScrean} />
-      <Stack.Screen name="register_As" component={RegisterAs} />
-      <Stack.Screen name="register_As_doctor" component={RegisterAsDoctor} />
+      <Stack.Screen name="form" component={FormPage} />
       <Stack.Screen name="lab" component={LabScreen} />
       <Stack.Screen name="pharmacys" component={PharmacyScreen} />
+        <Stack.Screen name="Chats" component={PeopleList} />
+        <Stack.Screen name="ChatScreen" component={ChatScreen} /> 
+      <Stack.Screen name="register_As" component={RegisterAs} />
+      <Stack.Screen name="register_As_doctor" component={RegisterAsDoctor} />
+      
       <Stack.Screen name="DoctorsManagement" component={DoctorsManagement}/>
       <Stack.Screen name="PharmcyManagement" component={PharmactManagement}/>
       <Stack.Screen name="LaboratoryManagement" component={LaboratoryManagement}/>
       <Stack.Screen name="register_As_pharmacy" component={RegisterAsPharmacy}/>
       <Stack.Screen name="register_As_laboratory" component={RegisterAsLaboratory}/>
-      <Stack.Screen name="Chats" component={PeopleList} />
-        <Stack.Screen name="ChatScreen" component={ChatScreen} />
+    
       <Stack.Screen name="feedback" component={FeedbackScreen}/>
        <Stack.Screen name="admin" component={AdminDashboardScreen}/>
      
